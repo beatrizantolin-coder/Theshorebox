@@ -18,10 +18,8 @@
       <a class="site-header__logo" href="#home" aria-label="The Shore Box Manilva, back to top">
         <img src="assets/img/logo.svg" alt="The Shore Box Manilva" width="120" height="107">
       </a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-        <span class="nav-toggle__bar"></span>
-        <span class="visually-hidden">Menu</span>
-      </button>
+      <!-- Mobile header action (the mobile mockup shows no menu) -->
+      <button class="btn btn--gold site-header__cta" type="button" data-todo="rent">Rent your unit NOW</button>
       <nav class="site-nav" id="site-nav" aria-label="Main">
         <ul class="site-nav__list">
           <li><a href="#home">Home</a></li>
@@ -43,13 +41,13 @@
           <h1 class="hero__title">Rent<br>store<br>relax<span class="dot">.</span></h1>
           <p class="hero__lead">Rent the size you need, for as long as you need it. Storage units from 2m², with 24/7 access, CCTV and clear pricing. No minimum rental period or hidden terms. Ready in 20 minutes.</p>
           <!-- TODO: "Rent your unit NOW" has no destination yet -->
-          <button class="btn btn--gold btn--lg" type="button" data-todo="rent">Rent your unit NOW</button>
-          <ul class="hero__stats">
-            <li><strong>+300</strong><span>Units available</span></li>
-            <li><strong>24/7</strong><span>Total access</span></li>
-            <li><strong>2m<sup>2</sup></strong><span>Minimum space</span></li>
-          </ul>
+          <button class="btn btn--gold btn--lg hero__cta" type="button" data-todo="rent">Rent your unit NOW</button>
         </div>
+        <ul class="hero__stats" data-reveal="left">
+          <li><strong>+300</strong><span>Units available</span></li>
+          <li><strong>24/7</strong><span>Total access</span></li>
+          <li><strong>2m<sup>2</sup></strong><span>Minimum space</span></li>
+        </ul>
         <div class="hero__media" data-reveal="right">
           <img class="hero__image" src="assets/img/hero-unit.webp" width="1200" height="1485" alt="Storage unit with a bicycle, a floor lamp, a suitcase and The Shore Box cardboard boxes" fetchpriority="high">
           <img class="hero__badge" src="assets/img/cctv-badge.webp" width="256" height="256" alt="CCTV protected">
@@ -90,15 +88,13 @@
 
     <!-- Space made easy (services carousel) -->
     <section class="services section" id="about-us">
-      <div class="container">
-        <div class="section-head" data-reveal="up">
-          <h2 class="section-title">Space made easy<span class="dot">.</span></h2>
-          <!-- TODO: "Book NOW" has no destination yet -->
-          <button class="btn btn--gold btn--md" type="button" data-todo="book">Book NOW</button>
-        </div>
-        <p class="section-lead services__lead" data-reveal="up">From stackable boxes to a storage unit that fits your needs, we help you make room without the hassle.</p>
+      <div class="container section-layout">
+        <h2 class="section-title layout-title" data-reveal="up">Space made easy<span class="dot">.</span></h2>
+        <p class="section-lead layout-lead" data-reveal="up">From stackable boxes to a storage unit that fits your needs, we help you make room without the hassle.</p>
+        <!-- TODO: "Book NOW" has no destination yet -->
+        <button class="btn btn--gold btn--md layout-action" type="button" data-todo="book" data-reveal="up">Book NOW</button>
 
-        <div class="carousel" data-carousel aria-roledescription="carousel" aria-label="Our services">
+        <div class="carousel layout-body" data-carousel aria-roledescription="carousel" aria-label="Our services">
           <div class="carousel__viewport">
             <!-- Source cards: add new services here. JS builds the slides from this list. -->
             <ul class="carousel__source">
@@ -126,12 +122,12 @@
 
     <!-- How it works + FAQs -->
     <section class="how section section--blue" id="how-it-works">
-      <div class="container">
-        <div class="section-head" data-reveal="up">
-          <h2 class="section-title">How it works<span class="dot">.</span></h2>
-          <a class="btn btn--gold btn--md" href="#calculator">How much space do I need?</a>
-        </div>
-        <ol class="steps">
+      <div class="container section-layout">
+        <h2 class="section-title layout-title" data-reveal="up">How it works<span class="dot">.</span></h2>
+        <p class="section-lead layout-lead how__lead" data-reveal="up">It’ll take you just two minutes to register, and you can start storing your belongings quickly and securely today.</p>
+        <!-- TODO: "START NOW" has no destination yet -->
+        <button class="btn btn--gold btn--md btn--caps layout-action" type="button" data-todo="start" data-reveal="up">Start now</button>
+        <ol class="steps layout-body">
           <li class="step" data-reveal="up">
             <img class="step__icon" src="assets/icons/step-scan.svg" alt="" width="60" height="64">
             <h3 class="step__title">Scan and book in minutes.</h3>
@@ -197,14 +193,13 @@
 
     <!-- Choose your space -->
     <section class="sizes section section--cream" id="storage-units">
-      <div class="container">
-        <div class="section-head" data-reveal="up">
-          <h2 class="section-title">Choose your space<span class="dot">.</span></h2>
-          <a class="btn btn--gold btn--md" href="#calculator">How much space do I need?</a>
-        </div>
-        <p class="section-lead" data-reveal="up">Choose the space that fits your plans and keep your home feeling like home.</p>
+      <div class="container section-layout">
+        <h2 class="section-title layout-title" data-reveal="up">Choose your space<span class="dot">.</span></h2>
+        <p class="section-lead layout-lead" data-reveal="up">Choose the space that fits your plans and keep your home feeling like home.</p>
+        <a class="btn btn--blue btn--md layout-action" href="#calculator" data-reveal="up">How much space do I need?</a>
 
-        <ul class="size-cards">
+        <div class="layout-body">
+        <ul class="size-cards" data-snap-dots>
           <li class="size-card" data-reveal="up">
             <div class="size-card__body">
               <p class="size-card__size">2<span>m<sup>2</sup></span></p>
@@ -234,6 +229,7 @@
             <button class="btn btn--gold btn--block" type="button" data-todo="book">Book now</button>
           </li>
         </ul>
+        <div class="snap-dots" aria-hidden="true"></div>
 
         <!-- Calculator: layout with example data only.
              TODO: calculation logic, conversion factors and the "By home size" view are still to be defined. -->
@@ -247,14 +243,14 @@
             <p class="calculator__hint">Choose how many of each you need to store.</p>
             <ul class="counters">
               <li class="counter"><span class="counter__label">Moving boxes</span><span class="counter__ctrl"><button type="button" data-step="-1" aria-label="Fewer moving boxes">−</button><output>0</output><button type="button" data-step="1" aria-label="More moving boxes">+</button></span></li>
-              <li class="counter"><span class="counter__label">Large suitcases or bags</span><span class="counter__ctrl"><button type="button" data-step="-1" aria-label="Fewer large suitcases or bags">−</button><output>0</output><button type="button" data-step="1" aria-label="More large suitcases or bags">+</button></span></li>
               <li class="counter"><span class="counter__label">Bicycles</span><span class="counter__ctrl"><button type="button" data-step="-1" aria-label="Fewer bicycles">−</button><output>0</output><button type="button" data-step="1" aria-label="More bicycles">+</button></span></li>
-              <li class="counter"><span class="counter__label">Small appliances</span><span class="counter__ctrl"><button type="button" data-step="-1" aria-label="Fewer small appliances">−</button><output>0</output><button type="button" data-step="1" aria-label="More small appliances">+</button></span></li>
               <li class="counter"><span class="counter__label">Single beds</span><span class="counter__ctrl"><button type="button" data-step="-1" aria-label="Fewer single beds">−</button><output>0</output><button type="button" data-step="1" aria-label="More single beds">+</button></span></li>
-              <li class="counter"><span class="counter__label">Double beds</span><span class="counter__ctrl"><button type="button" data-step="-1" aria-label="Fewer double beds">−</button><output>0</output><button type="button" data-step="1" aria-label="More double beds">+</button></span></li>
               <li class="counter"><span class="counter__label">Wardrobes</span><span class="counter__ctrl"><button type="button" data-step="-1" aria-label="Fewer wardrobes">−</button><output>0</output><button type="button" data-step="1" aria-label="More wardrobes">+</button></span></li>
-              <li class="counter"><span class="counter__label">Sofas</span><span class="counter__ctrl"><button type="button" data-step="-1" aria-label="Fewer sofas">−</button><output>0</output><button type="button" data-step="1" aria-label="More sofas">+</button></span></li>
               <li class="counter"><span class="counter__label">Dining table and chairs</span><span class="counter__ctrl"><button type="button" data-step="-1" aria-label="Fewer dining tables and chairs">−</button><output>0</output><button type="button" data-step="1" aria-label="More dining tables and chairs">+</button></span></li>
+              <li class="counter"><span class="counter__label">Large suitcases or bags</span><span class="counter__ctrl"><button type="button" data-step="-1" aria-label="Fewer large suitcases or bags">−</button><output>0</output><button type="button" data-step="1" aria-label="More large suitcases or bags">+</button></span></li>
+              <li class="counter"><span class="counter__label">Small appliances</span><span class="counter__ctrl"><button type="button" data-step="-1" aria-label="Fewer small appliances">−</button><output>0</output><button type="button" data-step="1" aria-label="More small appliances">+</button></span></li>
+              <li class="counter"><span class="counter__label">Double beds</span><span class="counter__ctrl"><button type="button" data-step="-1" aria-label="Fewer double beds">−</button><output>0</output><button type="button" data-step="1" aria-label="More double beds">+</button></span></li>
+              <li class="counter"><span class="counter__label">Sofas</span><span class="counter__ctrl"><button type="button" data-step="-1" aria-label="Fewer sofas">−</button><output>0</output><button type="button" data-step="1" aria-label="More sofas">+</button></span></li>
               <li class="counter"><span class="counter__label">Fridge or washing machine</span><span class="counter__ctrl"><button type="button" data-step="-1" aria-label="Fewer fridges or washing machines">−</button><output>0</output><button type="button" data-step="1" aria-label="More fridges or washing machines">+</button></span></li>
             </ul>
             <p class="calculator__note">This calculator offers guidance only. Item measurements, stacking and access needs affect the space required.</p>
@@ -266,6 +262,7 @@
             </div>
             <button class="btn btn--gold btn--block" type="button" data-todo="book">Book now</button>
           </aside>
+        </div>
         </div>
       </div>
     </section>
@@ -346,7 +343,7 @@
         <li><a href="#" data-todo="legal">Legal Notice</a></li>
         <li><a href="#" data-todo="legal">Privacy Policy</a></li>
         <li><a href="#" data-todo="legal">Cookie Policy</a></li>
-        <li>b-nice design 2026</li>
+        <li class="site-footer__credit">b-nice design 2026</li>
       </ul>
       <button class="btn btn--gold site-footer__cta" type="button" data-todo="book">Book now</button>
     </div>

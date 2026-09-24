@@ -9,21 +9,16 @@
 
   /* Header: hides on scroll down, reappears on scroll up ------------------ */
   var header = document.getElementById("site-header");
-  var navToggle = document.querySelector(".nav-toggle");
-  var nav = document.getElementById("site-nav");
   var lastY = window.scrollY;
   var ticking = false;
 
   function onScroll() {
     var y = window.scrollY;
-    var menuOpen = nav.classList.contains("is-open");
     header.classList.toggle("is-compact", y > 40);
-    if (!menuOpen) {
-      if (y > lastY && y > header.offsetHeight) {
-        header.classList.add("is-hidden");
-      } else if (y < lastY) {
-        header.classList.remove("is-hidden");
-      }
+    if (y > lastY && y > header.offsetHeight) {
+      header.classList.add("is-hidden");
+    } else if (y < lastY) {
+      header.classList.remove("is-hidden");
     }
     lastY = y;
     ticking = false;
@@ -35,23 +30,6 @@
     }
   }, { passive: true });
   onScroll();
-
-  /* Mobile menu ------------------------------------------------------------ */
-  function closeMenu() {
-    nav.classList.remove("is-open");
-    navToggle.setAttribute("aria-expanded", "false");
-  }
-  navToggle.addEventListener("click", function () {
-    var open = !nav.classList.contains("is-open");
-    nav.classList.toggle("is-open", open);
-    navToggle.setAttribute("aria-expanded", String(open));
-  });
-  nav.addEventListener("click", function (e) {
-    if (e.target.closest("a")) closeMenu();
-  });
-  document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape") closeMenu();
-  });
 
   /* Actions without a destination yet --------------------------------------
      TODO: connect "BOOK NOW", "Rent your unit NOW" and the legal links. */
@@ -199,6 +177,24 @@
   } else {
     revealEls.forEach(function (el) { el.classList.add("is-visible"); });
   }
+
+  /* Size cards: swipeable on mobile, with dots ----------------------------- */
+  document.querySelectorAll("[data-snap-dots]").forEach(function (list) {
+    var dotsWrap = list.nextElementSibling;
+    var cards = Array.prototype.slice.call(list.children);
+    var dots = cards.map(function () {
+      var dot = document.createElement("span");
+      dot.className = "carousel__dot";
+      dotsWrap.appendChild(dot);
+      return dot;
+    });
+    function update() {
+      var i = Math.round(list.scrollLeft / Math.max(1, list.clientWidth));
+      dots.forEach(function (d, k) { d.classList.toggle("is-current", k === i); });
+    }
+    list.addEventListener("scroll", function () { window.requestAnimationFrame(update); }, { passive: true });
+    update();
+  });
 
   /* FAQ accordion ---------------------------------------------------------- */
   document.querySelectorAll(".faq__q").forEach(function (btn) {
