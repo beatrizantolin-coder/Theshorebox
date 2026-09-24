@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- TODO: title and meta description are provisional, pending approval -->
+  <title>The Shore Box Manilva | Storage units in San Luis de Sabinillas</title>
+  <meta name="description" content="Storage units from 2 m² in San Luis de Sabinillas, with 24/7 access, CCTV and clear pricing. No minimum rental period or hidden terms.">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/arimo-bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/aribau-grotesk-extralight.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="site-header" id="site-header">
+    <div class="container site-header__inner">
+      <a class="site-header__logo" href="#home" aria-label="The Shore Box Manilva, back to top">
+        <img src="assets/img/logo.svg" alt="The Shore Box Manilva" width="120" height="107">
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle__bar"></span>
+        <span class="visually-hidden">Menu</span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul class="site-nav__list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#how-it-works">How it works</a></li>
+          <li><a href="#about-us">About us</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+        <a class="btn btn--gold site-nav__cta" href="#contact">Contact us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="container hero__grid">
+        <div class="hero__text" data-reveal="left">
+          <h1 class="hero__title">Rent<br>store<br>relax<span class="dot">.</span></h1>
+          <p class="hero__lead">Rent the size you need, for as long as you need it. Storage units from 2m², with 24/7 access, CCTV and clear pricing. No minimum rental period or hidden terms. Ready in 20 minutes.</p>
+          <!-- TODO: "Rent your unit NOW" has no destination yet -->
+          <button class="btn btn--gold btn--lg" type="button" data-todo="rent">Rent your unit NOW</button>
+          <ul class="hero__stats">
+            <li><strong>+300</strong><span>Units available</span></li>
+            <li><strong>24/7</strong><span>Total access</span></li>
+            <li><strong>2m<sup>2</sup></strong><span>Minimum space</span></li>
+          </ul>
+        </div>
+        <div class="hero__media" data-reveal="right">
+          <img class="hero__image" src="assets/img/hero-unit.webp" width="1200" height="1485" alt="Storage unit with a bicycle, a floor lamp, a suitcase and The Shore Box cardboard boxes" fetchpriority="high">
+          <img class="hero__badge" src="assets/img/cctv-badge.webp" width="256" height="256" alt="CCTV protected">
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features" aria-label="Features">
+      <ul class="container features__list">
+        <li class="feature" data-reveal="up">
+          <img class="feature__icon" src="assets/icons/feature-access.svg" alt="" width="57" height="53">
+          <h2 class="feature__title">24/7 access</h2>
+          <p>Come and go whenever you like using your personal access code.</p>
+        </li>
+        <li class="feature" data-reveal="up">
+          <img class="feature__icon" src="assets/icons/feature-cctv.svg" alt="" width="55" height="56">
+          <h2 class="feature__title">CCTV</h2>
+          <p>Cameras at entrances, along corridors and around the perimeter.</p>
+        </li>
+        <li class="feature" data-reveal="up">
+          <img class="feature__icon" src="assets/icons/feature-climate.svg" alt="" width="60" height="57">
+          <h2 class="feature__title">Climate control</h2>
+          <p>Stable temperature and humidity throughout the year.</p>
+        </li>
+        <li class="feature" data-reveal="up">
+          <img class="feature__icon" src="assets/icons/feature-insurance.svg" alt="" width="50" height="53">
+          <h2 class="feature__title">Optional insurance</h2>
+          <p>Cover based on the value of your stored belongings.</p>
+        </li>
+        <li class="feature" data-reveal="up">
+          <img class="feature__icon" src="assets/icons/feature-transport.svg" alt="" width="76" height="44">
+          <h2 class="feature__title">Transport</h2>
+          <p>A van and a helper to load and unload your belongings.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Space made easy (services carousel) -->
+    <section class="services section" id="about-us">
+      <div class="container">
+        <div class="section-head" data-reveal="up">
+          <h2 class="section-title">Space made easy<span class="dot">.</span></h2>
+          <!-- TODO: "Book NOW" has no destination yet -->
+          <button class="btn btn--gold btn--md" type="button" data-todo="book">Book NOW</button>
+        </div>
+        <p class="section-lead services__lead" data-reveal="up">From stackable boxes to a storage unit that fits your needs, we help you make room without the hassle.</p>
+
+        <div class="carousel" data-carousel aria-roledescription="carousel" aria-label="Our services">
+          <div class="carousel__viewport">
+            <!-- Source cards: add new services here. JS builds the slides from this list. -->
+            <ul class="carousel__source">
+              <li class="service" data-reveal="up">
+                <img class="service__image" src="assets/img/packing-materials.webp" width="800" height="1190" alt="Open The Shore Box cardboard box on a wooden table" loading="lazy">
+                <h3 class="service__label">Packing materials</h3>
+                <p class="service__text">Stackable cardboard boxes specially designed to save time when packing and to be reused.</p>
+              </li>
+              <li class="service" data-reveal="up">
+                <img class="service__image" src="assets/img/move-in-assistance.webp" width="900" height="675" alt="Open storage unit with boxes, a lamp and an armchair wrapped in plastic" loading="lazy">
+                <h3 class="service__label">Move-in assistance</h3>
+                <p class="service__text">Need a hand when you arrive? We can help you unload and arrange.</p>
+              </li>
+              <li class="service" data-reveal="up">
+                <img class="service__image" src="assets/img/transport-service.webp" width="800" height="1000" alt="Black The Shore Box van parked on a seafront road with palm trees" loading="lazy">
+                <h3 class="service__label">Transport service</h3>
+                <p class="service__text">Our transport service can collect your belongings or bring them back to you.</p>
+              </li>
+            </ul>
+          </div>
+          <div class="carousel__dots" role="tablist" aria-label="Choose slide"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works + FAQs -->
+    <section class="how section section--blue" id="how-it-works">
+      <div class="container">
+        <div class="section-head" data-reveal="up">
+          <h2 class="section-title">How it works<span class="dot">.</span></h2>
+          <a class="btn btn--gold btn--md" href="#calculator">How much space do I need?</a>
+        </div>
+        <ol class="steps">
+          <li class="step" data-reveal="up">
+            <img class="step__icon" src="assets/icons/step-scan.svg" alt="" width="60" height="64">
+            <h3 class="step__title">Scan and book in minutes.</h3>
+            <p>Scan the QR code to check availability and request your unit.</p>
+          </li>
+          <li class="step" data-reveal="up">
+            <img class="step__icon" src="assets/icons/step-space.svg" alt="" width="68" height="67">
+            <h3 class="step__title">Choose your space.</h3>
+            <p>Pick the size that fits what you need to store.</p>
+          </li>
+          <li class="step" data-reveal="up">
+            <img class="step__icon" src="assets/icons/step-store.svg" alt="" width="73" height="66">
+            <h3 class="step__title">Store safely.</h3>
+            <p>Bring your belongings in and arrange them in your unit.</p>
+          </li>
+          <li class="step" data-reveal="up">
+            <img class="step__icon" src="assets/icons/step-access.svg" alt="" width="63" height="64">
+            <h3 class="step__title">Access whenever you need.</h3>
+            <p>Come and go using your personal access code.</p>
+          </li>
+        </ol>
+      </div>
+
+      <div class="container faq" id="faq">
+        <h2 class="section-title section-title--sm" data-reveal="up">FAQs<span class="dot">.</span></h2>
+        <div class="faq__box" data-reveal="up">
+          <div class="faq__item">
+            <h3><button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-a1" id="faq-q1">How much does a storage unit at The Shore Box cost?<span class="faq__sign" aria-hidden="true"></span></button></h3>
+            <div class="faq__a" id="faq-a1" role="region" aria-labelledby="faq-q1">
+              <div><p>The price depends on the amount of space you need. The best option is to visit our facilities yourself or contact our advisers by calling free of charge on +34 617 37 69 36, and we will prepare a quote tailored to your space requirements.</p></div>
+            </div>
+          </div>
+          <div class="faq__item">
+            <h3><button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-a2" id="faq-q2">What storage unit sizes are available?<span class="faq__sign" aria-hidden="true"></span></button></h3>
+            <div class="faq__a" id="faq-a2" role="region" aria-labelledby="faq-q2">
+              <div><p>At The Shore Box we offer spaces from 2 m² to 200 m² to suit every need. We have units for individuals and larger spaces for businesses.</p></div>
+            </div>
+          </div>
+          <div class="faq__item">
+            <h3><button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-a3" id="faq-q3">How long does it take to rent and access a unit?<span class="faq__sign" aria-hidden="true"></span></button></h3>
+            <div class="faq__a" id="faq-a3" role="region" aria-labelledby="faq-q3">
+              <div><p>Renting your unit at The Shore Box is very easy. You can book your space by calling free of charge on +34 617 37 69 36 or by visiting our facilities. From your very first visit to The Shore Box, you can start storing all your belongings.</p></div>
+            </div>
+          </div>
+          <div class="faq__item">
+            <h3><button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-a4" id="faq-q4">What are the benefits of renting with The Shore Box?<span class="faq__sign" aria-hidden="true"></span></button></h3>
+            <div class="faq__a" id="faq-a4" role="region" aria-labelledby="faq-q4">
+              <div><p>The Shore Box units are tailored to your needs. Our building has every security and accessibility measure for your peace of mind, and you can benefit from all of it under a single contract.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Help banner -->
+    <section class="help" aria-labelledby="help-title">
+      <img class="help__image" src="assets/img/help-staff.webp" width="2400" height="1697" alt="The Shore Box staff member in a branded polo shirt with arms crossed at the reception desk" loading="lazy">
+      <div class="help__content" data-reveal="up">
+        <h2 class="help__title" id="help-title">Do you still need help?</h2>
+        <a class="btn btn--gold btn--wide" href="#contact">Get in touch with us</a>
+      </div>
+    </section>
+
+    <!-- Choose your space -->
+    <section class="sizes section section--cream" id="storage-units">
+      <div class="container">
+        <div class="section-head" data-reveal="up">
+          <h2 class="section-title">Choose your space<span class="dot">.</span></h2>
+          <a class="btn btn--gold btn--md" href="#calculator">How much space do I need?</a>
+        </div>
+        <p class="section-lead" data-reveal="up">Choose the space that fits your plans and keep your home feeling like home.</p>
+
+        <ul class="size-cards">
+          <li class="size-card" data-reveal="up">
+            <div class="size-card__body">
+              <p class="size-card__size">2<span>m<sup>2</sup></span></p>
+              <p class="size-card__text">Ideal for a move or storing belongings at the end of the season.</p>
+              <p class="size-card__price">20€<span>/month</span></p>
+            </div>
+            <img class="size-card__art" src="assets/img/size-2.svg" alt="" width="108" height="137" loading="lazy">
+            <!-- TODO: "BOOK NOW" has no destination yet -->
+            <button class="btn btn--gold btn--block" type="button" data-todo="book">Book now</button>
+          </li>
+          <li class="size-card" data-reveal="up">
+            <div class="size-card__body">
+              <p class="size-card__size">10<span>m<sup>2</sup></span></p>
+              <p class="size-card__text">For the contents of an entire home or a family storage unit.</p>
+              <p class="size-card__price">120€<span>/month</span></p>
+            </div>
+            <img class="size-card__art" src="assets/img/size-10.svg" alt="" width="131" height="181" loading="lazy">
+            <button class="btn btn--gold btn--block" type="button" data-todo="book">Book now</button>
+          </li>
+          <li class="size-card" data-reveal="up">
+            <div class="size-card__body">
+              <p class="size-card__size">20<span>m<sup>2</sup></span></p>
+              <p class="size-card__text">For business storage or large volumes of goods.</p>
+              <p class="size-card__price">180€<span>/month</span></p>
+            </div>
+            <img class="size-card__art" src="assets/img/size-20.svg" alt="" width="124" height="181" loading="lazy">
+            <button class="btn btn--gold btn--block" type="button" data-todo="book">Book now</button>
+          </li>
+        </ul>
+
+        <!-- Calculator: layout with example data only.
+             TODO: calculation logic, conversion factors and the "By home size" view are still to be defined. -->
+        <div class="calculator" id="calculator" data-reveal="up">
+          <div class="calculator__main">
+            <h3 class="calculator__title">How much space do I need?</h3>
+            <div class="calculator__tabs" role="tablist" aria-label="Calculation method">
+              <button class="tab is-active" type="button" role="tab" aria-selected="true">By items</button>
+              <button class="tab" type="button" role="tab" aria-selected="false">By home size</button>
+            </div>
+            <p class="calculator__hint">Choose how many of each you need to store.</p>
+            <ul class="counters">
+              <li class="counter"><span class="counter__label">Moving boxes</span><span class="counter__ctrl"><button type="button" data-step="-1" aria-label="Fewer moving boxes">−</button><output>0</output><button type="button" data-step="1" aria-label="More moving boxes">+</button></span></li>
+              <li class="counter"><span class="counter__label">Large suitcases or bags</span><span class="counter__ctrl"><button type="button" data-step="-1" aria-label="Fewer large suitcases or bags">−</button><output>0</output><button type="button" data-step="1" aria-label="More large suitcases or bags">+</button></span></li>
+              <li class="counter"><span class="counter__label">Bicycles</span><span class="counter__ctrl"><button type="button" data-step="-1" aria-label="Fewer bicycles">−</button><output>0</output><button type="button" data-step="1" aria-label="More bicycles">+</button></span></li>
+              <li class="counter"><span class="counter__label">Small appliances</span><span class="counter__ctrl"><button type="button" data-step="-1" aria-label="Fewer small appliances">−</button><output>0</output><button type="button" data-step="1" aria-label="More small appliances">+</button></span></li>
+              <li class="counter"><span class="counter__label">Single beds</span><span class="counter__ctrl"><button type="button" data-step="-1" aria-label="Fewer single beds">−</button><output>0</output><button type="button" data-step="1" aria-label="More single beds">+</button></span></li>
+              <li class="counter"><span class="counter__label">Double beds</span><span class="counter__ctrl"><button type="button" data-step="-1" aria-label="Fewer double beds">−</button><output>0</output><button type="button" data-step="1" aria-label="More double beds">+</button></span></li>
+              <li class="counter"><span class="counter__label">Wardrobes</span><span class="counter__ctrl"><button type="button" data-step="-1" aria-label="Fewer wardrobes">−</button><output>0</output><button type="button" data-step="1" aria-label="More wardrobes">+</button></span></li>
+              <li class="counter"><span class="counter__label">Sofas</span><span class="counter__ctrl"><button type="button" data-step="-1" aria-label="Fewer sofas">−</button><output>0</output><button type="button" data-step="1" aria-label="More sofas">+</button></span></li>
+              <li class="counter"><span class="counter__label">Dining table and chairs</span><span class="counter__ctrl"><button type="button" data-step="-1" aria-label="Fewer dining tables and chairs">−</button><output>0</output><button type="button" data-step="1" aria-label="More dining tables and chairs">+</button></span></li>
+              <li class="counter"><span class="counter__label">Fridge or washing machine</span><span class="counter__ctrl"><button type="button" data-step="-1" aria-label="Fewer fridges or washing machines">−</button><output>0</output><button type="button" data-step="1" aria-label="More fridges or washing machines">+</button></span></li>
+            </ul>
+            <p class="calculator__note">This calculator offers guidance only. Item measurements, stacking and access needs affect the space required.</p>
+          </div>
+          <aside class="calculator__result" aria-live="polite">
+            <h3 class="calculator__result-title">Suggested space:</h3>
+            <div class="suggested">
+              <div class="suggested__box"><strong>5</strong><span>m<sup>2</sup></span></div>
+            </div>
+            <button class="btn btn--gold btn--block" type="button" data-todo="book">Book now</button>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quote -->
+    <section class="quote section section--dark">
+      <div class="container quote__inner" data-reveal="up">
+        <p class="quote__text">Life on the coast moves at its own pace. Sometimes your belongings need a place to pause. The Shore Box offers practical storage in San Luis de Sabinillas for furniture, boxes and the things you are not ready to part with.</p>
+        <button class="btn btn--gold btn--wide" type="button" data-todo="book">Book now</button>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact section" id="contact">
+      <div class="container">
+        <h2 class="section-title" data-reveal="up">Let’s talk about your space<span class="dot">.</span></h2>
+        <p class="section-lead" data-reveal="up">Tell us what you need to store, and we’ll get back to you on the same business day with availability and pricing.</p>
+        <!-- TODO: the form is not sent anywhere yet (no backend, no action, no confirmation message) -->
+        <form class="contact-form" id="contact-form" novalidate data-reveal="left">
+          <div class="contact-form__row">
+            <label class="field"><span>Name</span><input type="text" name="name" autocomplete="name"></label>
+            <label class="field"><span>Phone</span><input type="tel" name="phone" autocomplete="tel"></label>
+          </div>
+          <label class="field"><span>Email</span><input type="email" name="email" autocomplete="email"></label>
+          <label class="field"><span>M2 you need</span><input type="text" name="size" placeholder="I don’t know yet"></label>
+          <label class="field"><span>Message</span><textarea name="message" rows="4"></textarea></label>
+          <button class="btn btn--gold btn--block" type="submit">Send</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Location -->
+    <section class="location section section--cream">
+      <div class="container location__grid">
+        <div class="map" data-reveal="left">
+          <div class="map__placeholder" id="map-placeholder">
+            <p>The map is provided by Google Maps, which uses cookies.</p>
+            <button class="btn btn--gold btn--md" type="button" data-cookie-accept>Accept cookies and show map</button>
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Av.+Vel%C3%A1zquez+5%2C+29692+San+Luis+de+Sabinillas%2C+M%C3%A1laga" target="_blank" rel="noopener">Open in Google Maps</a>
+          </div>
+        </div>
+        <div class="location__info" data-reveal="right">
+          <p class="eyebrow">You can find us here</p>
+          <h2 class="location__title">San Luis de Sabinillas</h2>
+          <dl class="details">
+            <dt>Address</dt>
+            <dd>Av. Velázquez, 5<br>29692 San Luis de Sabinillas, Málaga</dd>
+            <dt>Opening hours</dt>
+            <dd>Monday to Friday · <span class="nowrap">9:00–19:00</span><br>Saturday · <span class="nowrap">10:00–14:00</span><br>Access to your unit · <span class="nowrap">24 h</span></dd>
+            <dt>Telephone</dt>
+            <dd><a href="tel:+34617376936">+34 617 37 69 36</a></dd>
+            <dt>Email</dt>
+            <dd><a class="details__email" href="mailto:hola@theshorebox.es">hola@theshorebox.es</a></dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__waves" aria-hidden="true"></div>
+    <div class="container site-footer__grid">
+      <img class="site-footer__logo" src="assets/img/logo.svg" alt="The Shore Box Manilva" width="120" height="107" loading="lazy">
+      <address class="site-footer__contact">
+        Av. Velázquez, 5<br>29692 San Luis de Sabinillas<br>Málaga<br><br>
+        Tel. <a href="tel:+34617376936">+34 617 37 69 36</a><br>
+        <a class="site-footer__email" href="mailto:hola@theshorebox.es">hola@theshorebox.es</a>
+      </address>
+      <ul class="site-footer__links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#how-it-works">How it works</a></li>
+        <li><a href="#about-us">About us</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <!-- TODO: legal pages do not exist yet -->
+      <ul class="site-footer__links">
+        <li><a href="#" data-todo="legal">Legal Notice</a></li>
+        <li><a href="#" data-todo="legal">Privacy Policy</a></li>
+        <li><a href="#" data-todo="legal">Cookie Policy</a></li>
+        <li>b-nice design 2026</li>
+      </ul>
+      <button class="btn btn--gold site-footer__cta" type="button" data-todo="book">Book now</button>
+    </div>
+  </footer>
+
+  <!-- Cookie notice (provisional text, pending approval) -->
+  <div class="cookie" id="cookie" role="dialog" aria-live="polite" aria-label="Cookie notice" hidden>
+    <p class="cookie__text">We use Google Maps to show you where to find us, and Google may set cookies when the map loads. You can accept them or carry on browsing without the map. <a href="#" data-todo="legal">Read our Cookie Policy</a>.</p>
+    <div class="cookie__actions">
+      <button class="btn btn--outline" type="button" data-cookie-reject>Reject</button>
+      <button class="btn btn--gold" type="button" data-cookie-accept>Accept</button>
+    </div>
+  </div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
