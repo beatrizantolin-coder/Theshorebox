@@ -201,6 +201,77 @@
     revealEls.forEach(function (el) { el.classList.add("is-visible"); });
   }
 
+  /* Features: auto-sliding two-column carousel on mobile ------------------
+     Moves one item to the left every few seconds and loops seamlessly (the
+     first items are cloned at the end). Swipe also works. */
+  document.querySelectorAll("[data-auto-carousel]").forEach(function (list) {
+    var mobile = window.matchMedia("(max-width: 899px)");
+    var items = Array.prototype.slice.call(list.children);
+    var PER_VIEW = 2;
+    var INTERVAL = 3500;
+    var clones = [];
+    var index = 0;
+    var timer = null;
+
+    function step() { return items[0].getBoundingClientRect().width; }
+    function place(animate) {
+      list.style.transition = animate ? "transform 0.9s var(--ease)" : "none";
+      list.style.transform = "translateX(" + (-index * step()) + "px)";
+    }
+    function next() {
+      index += 1;
+      place(true);
+    }
+    function prev() {
+      if (index === 0) { index = items.length; place(false); void list.offsetWidth; }
+      index -= 1;
+      place(true);
+    }
+    list.addEventListener("transitionend", function (e) {
+      if (e.target !== list) return;
+      if (index >= items.length) { index = 0; place(false); }
+    });
+    function stop() { clearInterval(timer); timer = null; }
+    function start() {
+      stop();
+      if (!mobile.matches || reduceMotion.matches) return;
+      timer = setInterval(next, INTERVAL);
+    }
+    function setup() {
+      clones.forEach(function (c) { c.remove(); });
+      clones = [];
+      index = 0;
+      if (mobile.matches) {
+        for (var i = 0; i < PER_VIEW; i++) {
+          var c = items[i].cloneNode(true);
+          c.setAttribute("aria-hidden", "true");
+          c.classList.add("is-visible");
+          list.appendChild(c);
+          clones.push(c);
+        }
+        place(false);
+      } else {
+        list.style.transform = "";
+        list.style.transition = "";
+      }
+      start();
+    }
+
+    var startX = null;
+    list.addEventListener("pointerdown", function (e) { startX = e.clientX; stop(); });
+    list.addEventListener("pointerup", function (e) {
+      if (startX === null) return;
+      var dx = e.clientX - startX;
+      if (Math.abs(dx) > 40) { if (dx < 0) next(); else prev(); }
+      startX = null;
+      start();
+    });
+    document.addEventListener("visibilitychange", function () { if (document.hidden) stop(); else start(); });
+    window.addEventListener("resize", function () { if (mobile.matches) place(false); });
+    mobile.addEventListener("change", setup);
+    setup();
+  });
+
   /* Size cards: swipeable on mobile, with dots ----------------------------- */
   document.querySelectorAll("[data-snap-dots]").forEach(function (list) {
     var dotsWrap = list.nextElementSibling;

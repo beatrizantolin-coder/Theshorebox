@@ -1178,6 +1178,36 @@ sup { font-size: 0.55em; line-height: 0; vertical-align: 0.9em; }
   }
   .hero__stats strong { font-size: calc(44.96 * var(--p)); line-height: 0.9; }
   .hero__stats span { font-size: calc(17.35 * var(--p)); font-weight: 280; white-space: nowrap; }
+
+  /* Features: two-column auto carousel */
+  .features { height: calc(254.5 * var(--p)); padding: 0; overflow: hidden; }
+  .features__list {
+    display: flex;
+    gap: 0;
+    max-width: none;
+    padding: 0;
+    margin-left: calc(-4.7 * var(--p));
+    will-change: transform;
+    touch-action: pan-y;
+  }
+  .feature {
+    position: relative;
+    flex: 0 0 calc(276.6 * var(--p));
+    padding: calc(107.5 * var(--p)) 0 0;
+    text-align: center;
+    white-space: nowrap;
+  }
+  .feature__icon {
+    position: absolute;
+    top: calc(var(--mt) * var(--p));
+    left: 50%;
+    height: calc(var(--mh) * var(--p));
+    width: auto;
+    margin: 0;
+    transform: translateX(calc(-50% + var(--mx) * var(--p)));
+  }
+  .feature__title { font-size: calc(24.09 * var(--p)); line-height: 1.1; }
+  .feature p { max-width: none; margin-top: calc(8.5 * var(--p)); font-size: calc(17 * var(--p)); font-weight: 280; line-height: 1.2; }
 }
 @media (max-width: 899px) {
   .br-mobile { display: inline; }
