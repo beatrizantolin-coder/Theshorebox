@@ -900,6 +900,9 @@ sup { font-size: 0.55em; line-height: 0; vertical-align: 0.9em; }
   }
   .size-card:first-child { padding-inline: 55.3px; }
   .size-card__size { font-size: 65px; line-height: 1; }
+  .size-card:not(:first-child) .size-card__unit {
+    position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
+  }
   .size-card__size span:not(.visually-hidden) { margin-left: 2px; font-family: var(--font-body); font-weight: 280; font-size: 0.7em; }
   .size-card__size sup,
   .suggested__size sup { font-size: 0.5em; vertical-align: 0.75em; }
@@ -1298,10 +1301,70 @@ sup { font-size: 0.55em; line-height: 0; vertical-align: 0.9em; }
   .help__content { position: relative; margin: 0; padding: calc(244 * var(--p)) 0 0; }
   .help__title { font-size: calc(50 * var(--p)); line-height: 1.1; }
   .help .btn { width: calc(401 * var(--p)); min-width: 0; min-height: calc(70.9 * var(--p)); margin: calc(38.5 * var(--p)) 0 0 calc(-20.6 * var(--p)); padding: 0; font-size: calc(24.92 * var(--p)); }
+
+  /* Choose your space: one card per swipe, then the calculator */
+  .sizes { padding: calc(55 * var(--p)) 0 calc(39.7 * var(--p)); }
+  .sizes .container { padding-inline: calc(28.5 * var(--p)) calc(27 * var(--p)); }
+  .sizes .layout-title { margin-left: calc(-1.8 * var(--p)); font-size: calc(50 * var(--p)); line-height: 1; }
+  .sizes .layout-lead { max-width: none; margin: calc(11.1 * var(--p)) 0 0 calc(-1.8 * var(--p)); font-size: calc(25 * var(--p)); line-height: 1.304; white-space: nowrap; }
+  .sizes .layout-body { margin-top: calc(49.5 * var(--p)); }
+  .size-cards { gap: calc(28.5 * var(--p)); }
+  .size-card {
+    position: relative;
+    display: block;
+    flex: 0 0 100%;
+    height: calc(431.2 * var(--p));
+    padding: calc(27 * var(--p)) 0 0 calc(58.6 * var(--p));
+    border-radius: 0;
+  }
+  .size-card:first-child { padding-inline: calc(58.6 * var(--p)) 0; }
+  .size-card__size { font-size: calc(78.43 * var(--p)); line-height: 1; }
+  .size-card__size .size-card__unit { margin-left: calc(7 * var(--p)); font-family: var(--font-body); font-size: calc(48.36 * var(--p)); font-weight: 280; }
+  .size-card__unit sup { font-size: 0.58em; vertical-align: 0.8em; }
+  .size-card__text { max-width: none; margin-top: calc(4 * var(--p)); font-size: calc(20 * var(--p)); font-weight: 280; line-height: 1.18; white-space: nowrap; }
+  .size-card__price { margin-top: calc(20 * var(--p)); font-size: calc(50.58 * var(--p)); }
+  .size-card__price span { font-size: calc(17.65 * var(--p)); font-weight: 280; }
+  .size-card__art { position: absolute; top: calc(var(--mt) * var(--p)); right: calc(60.3 * var(--p)); width: calc(var(--mw) * var(--p)); max-width: none; height: auto; }
+  .size-card:nth-child(1) .size-card__art { --mt: 99; --mw: 139; }
+  .size-card:nth-child(2) .size-card__art { --mt: 40; --mw: 170.4; }
+  .size-card:nth-child(3) .size-card__art { --mt: 32.4; --mw: 180.6; }
+  .size-card .btn {
+    position: absolute;
+    top: calc(315.5 * var(--p));
+    left: calc(50% - 177.15 * var(--p));
+    width: calc(354.3 * var(--p));
+    min-height: calc(70.9 * var(--p));
+    margin: 0;
+    font-size: calc(25 * var(--p));
+  }
+  .snap-dots { gap: calc(8.25 * var(--p)); margin-top: calc(19.8 * var(--p)); }
+  .snap-dots .carousel__dot { width: calc(9.5 * var(--p)); height: calc(9.5 * var(--p)); border-width: max(1px, calc(1 * var(--p))); }
+
+  .calculator {
+    position: relative;
+    display: block;
+    width: calc(486.7 * var(--p));
+    margin: calc(41 * var(--p)) 0 calc(56.9 * var(--p)) calc(0.5 * var(--p));
+    padding: calc(34 * var(--p)) calc(32.7 * var(--p)) calc(34.5 * var(--p)) calc(31.1 * var(--p));
+    border-radius: calc(30 * var(--p));
+  }
+  .calculator__title { font-size: calc(25 * var(--p)); line-height: 1.2; }
+  .calculator__tabs { gap: calc(18 * var(--p)); margin-top: calc(29.7 * var(--p)); }
+  .tab { flex: 0 0 calc(202.5 * var(--p)); min-width: 0; min-height: calc(56.7 * var(--p)); padding: 0; border-radius: 0; font-size: calc(20 * var(--p)); }
+  .calculator__hint { margin-top: calc(37.7 * var(--p)); font-size: calc(18 * var(--p)); }
+  .counters { grid-template-columns: minmax(0, 1fr); gap: calc(13.8 * var(--p)); margin-top: calc(12 * var(--p)); }
+  .counter { min-height: calc(59.3 * var(--p)); padding: 0 calc(16.3 * var(--p)) 0 calc(11.6 * var(--p)); border-color: var(--gold); border-radius: 0; font-size: calc(20 * var(--p)); }
+  .counter:nth-child(5), .counter:nth-child(10) { margin-top: calc(8.4 * var(--p)); }
+  .counter:nth-child(6) { margin-top: calc(5.5 * var(--p)); }
+  .counter__ctrl { gap: calc(10 * var(--p)); }
+  .counter__ctrl button { width: calc(33.4 * var(--p)); height: calc(33.4 * var(--p)); font-size: calc(18 * var(--p)); }
+  .counter__ctrl output { font-size: calc(16 * var(--p)); }
+  .calculator__note { position: absolute; top: calc(100% + 25.6 * var(--p)); left: calc(31.1 * var(--p)); width: calc(380 * var(--p)); margin: 0; font-size: calc(13 * var(--p)); line-height: 1.2; white-space: normal; }
 }
 @media (max-width: 899px) {
   .br-mobile { display: inline; }
-  .only-desktop { display: none; }
+  .only-desktop,
+  .only-desktop-block { display: none !important; }
 }
 @media (min-width: 900px) {
   .br-mobile,
