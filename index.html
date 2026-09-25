@@ -19,7 +19,7 @@
         <img src="assets/img/logo.svg" alt="The Shore Box Manilva" width="120" height="107">
       </a>
       <!-- Mobile header action (the mobile mockup shows no menu) -->
-      <button class="btn btn--gold site-header__cta" type="button" data-todo="rent">Rent your unit NOW</button>
+      <button class="btn btn--gold site-header__cta" type="button" data-todo="rent">Book your unit NOW</button>
       <nav class="site-nav" id="site-nav" aria-label="Main">
         <ul class="site-nav__list">
           <li><a href="#home">Home</a></li>
@@ -39,9 +39,9 @@
       <div class="container hero__grid">
         <div class="hero__text" data-reveal="left">
           <h1 class="hero__title">Rent<br>store<br>relax<span class="dot">.</span></h1>
-          <p class="hero__lead">Rent the size you need, for as long as you need it. Storage units from 2m², with 24/7 access, CCTV and clear pricing. No minimum rental period or hidden terms. Ready in 20 minutes.</p>
-          <!-- TODO: "Rent your unit NOW" has no destination yet -->
-          <button class="btn btn--gold btn--lg hero__cta" type="button" data-todo="rent">Rent your unit NOW</button>
+          <p class="hero__lead">Rent the size you need, for as long as you need it.<br class="br-desktop"> Storage units from 2m², with 24/7 access, CCTV and<br class="br-desktop"> clear pricing. No minimum rental period or hidden terms.<br class="br-desktop"> Ready in 20 minutes.</p>
+          <!-- TODO: "Book your unit NOW" has no destination yet -->
+          <button class="btn btn--gold btn--lg hero__cta" type="button" data-todo="rent">Book your unit NOW</button>
         </div>
         <ul class="hero__stats" data-reveal="left">
           <li><strong>+300</strong><span>Units available</span></li>
@@ -49,7 +49,9 @@
           <li><strong>2m<sup>2</sup></strong><span>Minimum space</span></li>
         </ul>
         <div class="hero__media" data-reveal="right">
-          <img class="hero__image" src="assets/img/hero-unit.webp" width="1200" height="1485" alt="Storage unit with a bicycle, a floor lamp, a suitcase and The Shore Box cardboard boxes" fetchpriority="high">
+          <div class="hero__frame">
+            <img class="hero__image" src="assets/img/hero-unit.webp" width="1200" height="1485" alt="Storage unit with a bicycle, a floor lamp, a suitcase and The Shore Box cardboard boxes" fetchpriority="high">
+          </div>
           <img class="hero__badge" src="assets/img/cctv-badge.webp" width="256" height="256" alt="CCTV protected">
         </div>
       </div>
