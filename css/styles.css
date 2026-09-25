@@ -943,6 +943,14 @@ sup { font-size: 0.55em; line-height: 0; vertical-align: 0.9em; }
   .suggested__price { position: absolute; top: 206.1px; left: 69px; margin: 0; font-size: 47px; }
   .suggested__art { position: absolute; top: 83.5px; left: 223px; width: 133.6px; }
   .calculator__result .btn { position: absolute; top: 304.8px; left: calc(50% - 145.75px); width: 291.5px; min-height: 58.3px; margin: 0; font-size: clamp(17px, 1.5vw, 21px); }
+
+  /* Quote measured on 7.png */
+  .quote { height: 704.3px; padding-block: 0; }
+  .quote__inner { padding-top: 149px; }
+  .quote__text { max-width: none; font-size: clamp(30px, 3vw, 42.6px); line-height: 1.205; }
+  .quote__text span { display: block; }
+  .quote__text span + span { margin-top: 8.3px; }
+  .quote .btn { min-width: 388px; min-height: 58px; margin-top: 124px; font-size: clamp(18px, 1.57vw, 22px); }
 }
 
 @media (min-width: 1200px) {
