@@ -829,11 +829,8 @@ sup { font-size: 0.55em; line-height: 0; vertical-align: 0.9em; }
   .carousel__dots { gap: 11.7px; margin-top: 57px; }
   .carousel__dot { width: 13.3px; height: 13.3px; }
   .layout-body { margin-top: 64px; }
-  .how .layout-action { min-width: 324px; }
   .section-lead { font-size: 18px; }
-  .how__lead { max-width: 500px; }
   .sizes .layout-lead { max-width: none; }
-  .how .layout-body { margin-top: 44px; }
 
   /* Features strip measured on 2.png */
   .features { height: 270px; padding-block: 0; }
@@ -864,6 +861,32 @@ sup { font-size: 0.55em; line-height: 0; vertical-align: 0.9em; }
     align-items: start;
     gap: 24px;
   }
+
+  /* How it works + FAQs measured on 4.png */
+  .how { padding-top: 141.4px; padding-bottom: 146px; }
+  .how .layout-lead { max-width: none; margin-top: 39px; font-size: clamp(18px, 1.64vw, 23px); line-height: 1.66; white-space: nowrap; }
+  .how .layout-action { align-self: start; min-width: 389.6px; min-height: 58.3px; margin-top: 45px; font-size: clamp(17px, 1.5vw, 21px); }
+  .how .layout-body { margin-top: 48.4px; }
+  .steps { grid-template-columns: repeat(4, 1fr); gap: 37.3px; }
+  .step { position: relative; min-height: 315.8px; padding: 96.9px 20px 22px 41.7px; border-radius: 0; background: rgba(255, 255, 255, 0.093); white-space: nowrap; }
+  .step__icon { position: absolute; top: var(--t); left: calc(41.7px + var(--l)); height: var(--h); margin: 0; }
+  .step__title { min-height: 0; font-size: 20px; line-height: 1.12; }
+  .step:first-child .step__title { margin-top: 6.9px; }
+  .step p { margin-top: 42px; font-size: 19.7px; line-height: 1.756; }
+
+  .faq { margin-top: 90px; }
+  .faq .section-title { font-size: clamp(32px, 2.9vw, 40px); }
+  .faq__box {
+    margin-top: 60.4px;
+    padding: 50.8px 46px 92.4px 58.2px;
+    border: 1px solid #ebeae8;
+    border-radius: 44px;
+    background: transparent;
+  }
+  .faq__item { border-bottom: 1px solid var(--gold); }
+  .faq__q { padding: 28.3px 24.4px 14.5px 8.4px; font-size: 19.5px; }
+  .faq__sign { flex-basis: 8.6px; width: 8.6px; height: 8.6px; margin-right: 0; }
+  .faq__sign::before, .faq__sign::after { inset: 3.8px 0 auto; }
 }
 
 @media (min-width: 1200px) {
