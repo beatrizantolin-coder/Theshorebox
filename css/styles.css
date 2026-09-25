@@ -816,8 +816,13 @@ sup { font-size: 0.55em; line-height: 0; vertical-align: 0.9em; }
   .sizes .layout-lead { max-width: none; }
   .how .layout-body { margin-top: 44px; }
 
-  .features__list { grid-template-columns: 226fr 243fr 240fr 242fr 160fr; gap: 0; }
-  .feature { padding-right: 16px; }
+  /* Features strip measured on 2.png */
+  .features { height: 270px; padding-block: 0; }
+  .features__list { grid-template-columns: 280.6fr 276.4fr 296.6fr 302.7fr 155.7fr; gap: 0; }
+  .feature { position: relative; padding-top: 128px; white-space: nowrap; }
+  .feature__icon { position: absolute; top: var(--t); left: var(--l); height: var(--h); margin: 0; }
+  .feature__title { font-size: 20px; line-height: 0.95; }
+  .feature p { max-width: none; margin-top: 8px; font-size: 16px; font-weight: 280; line-height: 1.3; }
 
   .steps { grid-template-columns: repeat(4, 1fr); gap: 24px 30px; }
 
