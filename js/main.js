@@ -213,7 +213,7 @@
     var index = 0;
     var timer = null;
 
-    function step() { return items[0].getBoundingClientRect().width; }
+    function step() { return items[1].getBoundingClientRect().left - items[0].getBoundingClientRect().left; }
     function place(animate) {
       list.style.transition = animate ? "transform 0.9s var(--ease)" : "none";
       list.style.transform = "translateX(" + (-index * step()) + "px)";
