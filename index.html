@@ -286,16 +286,16 @@
     <section class="contact section" id="contact">
       <div class="container">
         <h2 class="section-title" data-reveal="up">Let’s talk about your space<span class="dot">.</span></h2>
-        <p class="section-lead" data-reveal="up">Tell us what you need to store, and we’ll get back to you on the same business day with availability and pricing.</p>
+        <p class="section-lead" data-reveal="up">Tell us what you need to store, and we’ll get back to you on the same<br class="br-desktop"> business day with availability and pricing.</p>
         <!-- TODO: the form is not sent anywhere yet (no backend, no action, no confirmation message) -->
         <form class="contact-form" id="contact-form" novalidate data-reveal="left">
           <div class="contact-form__row">
-            <label class="field"><span>Name</span><input type="text" name="name" autocomplete="name"></label>
-            <label class="field"><span>Phone</span><input type="tel" name="phone" autocomplete="tel"></label>
+            <label class="field"><span>Name</span><input type="text" name="name" autocomplete="name" placeholder="Your Name"></label>
+            <label class="field"><span>Phone</span><input type="tel" name="phone" autocomplete="tel" placeholder="+34 123 456 789"></label>
           </div>
-          <label class="field"><span>Email</span><input type="email" name="email" autocomplete="email"></label>
+          <label class="field"><span>Email</span><input type="email" name="email" autocomplete="email" placeholder="Your email"></label>
           <label class="field"><span>M2 you need</span><input type="text" name="size" placeholder="I don’t know yet"></label>
-          <label class="field"><span>Message</span><textarea name="message" rows="4"></textarea></label>
+          <label class="field"><span>Message</span><textarea name="message" rows="4" placeholder="Text"></textarea></label>
           <button class="btn btn--gold btn--block" type="submit">Send</button>
         </form>
       </div>

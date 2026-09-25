@@ -951,6 +951,32 @@ sup { font-size: 0.55em; line-height: 0; vertical-align: 0.9em; }
   .quote__text span { display: block; }
   .quote__text span + span { margin-top: 8.3px; }
   .quote .btn { min-width: 388px; min-height: 58px; margin-top: 124px; font-size: clamp(18px, 1.57vw, 22px); }
+
+  /* Contact measured on 8.png (content sits further left, as in the capture) */
+  .contact { height: 1094.3px; padding-block: 0; background-size: cover; background-position: center bottom; }
+  .contact .container { max-width: none; padding-top: 174.8px; padding-left: max(var(--gutter), calc(50% - 753px)); }
+  .contact .section-lead { margin-top: 27.4px; font-size: clamp(18px, 1.64vw, 23px); line-height: 1.49; white-space: nowrap; }
+  .contact-form {
+    gap: 0;
+    width: 741.5px;
+    max-width: none;
+    min-height: 573.5px;
+    margin-top: 48px;
+    padding: 46.8px 69px 40px 65.9px;
+    border-radius: 0;
+    background: rgba(200, 185, 170, 0.2);
+  }
+  .contact-form__row { gap: 0 23.6px; }
+  .field { gap: 7.5px; margin-top: 0; }
+  .contact-form > .field,
+  .contact-form__row + .field { margin-top: 9.3px; }
+  .field span { font-size: 19px; line-height: 1.2; }
+  .field input,
+  .field textarea { min-height: 47.9px; padding: 8px 12px; border: 1px solid var(--gold); border-radius: 0; font-size: 15px; }
+  .field textarea { height: 98.5px; min-height: 0; resize: none; }
+  .field input::placeholder,
+  .field textarea::placeholder { color: #9d9d9d; }
+  .contact-form .btn { width: 607px; min-height: 58px; margin: 30.2px 0 0 2.6px; font-size: clamp(18px, 1.5vw, 21px); }
 }
 
 @media (min-width: 1200px) {
