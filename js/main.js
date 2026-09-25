@@ -9,13 +9,17 @@
 
   /* Header: hides on scroll down, reappears on scroll up ------------------ */
   var header = document.getElementById("site-header");
+  var navToggle = document.querySelector(".nav-toggle");
+  var nav = document.getElementById("site-nav");
   var lastY = window.scrollY;
   var ticking = false;
 
   function onScroll() {
     var y = window.scrollY;
     header.classList.toggle("is-compact", y > 40);
-    if (y > lastY && y > header.offsetHeight) {
+    if (nav.classList.contains("is-open")) {
+      // keep the header in place while the mobile menu is open
+    } else if (y > lastY && y > header.offsetHeight) {
       header.classList.add("is-hidden");
     } else if (y < lastY) {
       header.classList.remove("is-hidden");
@@ -31,8 +35,27 @@
   }, { passive: true });
   onScroll();
 
+  /* Mobile menu ------------------------------------------------------------ */
+  function closeMenu() {
+    nav.classList.remove("is-open");
+    header.classList.remove("is-menu-open");
+    navToggle.setAttribute("aria-expanded", "false");
+  }
+  navToggle.addEventListener("click", function () {
+    var open = !nav.classList.contains("is-open");
+    nav.classList.toggle("is-open", open);
+    header.classList.toggle("is-menu-open", open);
+    navToggle.setAttribute("aria-expanded", String(open));
+  });
+  nav.addEventListener("click", function (e) {
+    if (e.target.closest("a")) closeMenu();
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") closeMenu();
+  });
+
   /* Actions without a destination yet --------------------------------------
-     TODO: connect "BOOK NOW", "Rent your unit NOW" and the legal links. */
+     TODO: connect "BOOK NOW", "Book your unit NOW" and the legal links. */
   document.addEventListener("click", function (e) {
     var el = e.target.closest("a[data-todo]");
     if (el) e.preventDefault();

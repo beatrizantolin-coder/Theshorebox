@@ -18,8 +18,10 @@
       <a class="site-header__logo" href="#home" aria-label="The Shore Box Manilva, back to top">
         <img src="assets/img/logo.svg" alt="The Shore Box Manilva" width="120" height="107">
       </a>
-      <!-- Mobile header action (the mobile mockup shows no menu) -->
-      <button class="btn btn--gold site-header__cta" type="button" data-todo="rent">Book your unit NOW</button>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle__bar"></span>
+        <span class="visually-hidden">Menu</span>
+      </button>
       <nav class="site-nav" id="site-nav" aria-label="Main">
         <ul class="site-nav__list">
           <li><a href="#home">Home</a></li>
@@ -39,7 +41,7 @@
       <div class="container hero__grid">
         <div class="hero__text" data-reveal="left">
           <h1 class="hero__title">Rent<br>store<br>relax<span class="dot">.</span></h1>
-          <p class="hero__lead">Rent the size you need, for as long as you need it.<br class="br-desktop"> Storage units from 2m², with 24/7 access, CCTV and<br class="br-desktop"> clear pricing. No minimum rental period or hidden terms.<br class="br-desktop"> Ready in 20 minutes.</p>
+          <p class="hero__lead">Rent the size you need, for as long<br class="br-mobile"> as you need it.<br class="br-desktop"> Storage units from 2m²,<br class="br-mobile"> with 24/7 access, CCTV and<br class="br-desktop"> clear<br class="br-mobile"> pricing. No minimum rental period<br class="br-mobile"> or hidden terms.<br class="br-desktop"> Ready in 20 minutes.</p>
           <!-- TODO: "Book your unit NOW" has no destination yet -->
           <button class="btn btn--gold btn--lg hero__cta" type="button" data-todo="rent">Book your unit NOW</button>
         </div>
