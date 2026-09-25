@@ -615,12 +615,14 @@ sup { font-size: 0.55em; line-height: 0; vertical-align: 0.9em; }
 .details__email { color: var(--gold); font-family: var(--font-head); font-weight: 700; }
 
 /* Footer ----------------------------------------------------------------- */
-.site-footer { position: relative; background: var(--blue); color: var(--white); padding-bottom: 60px; }
+.site-footer { display: flow-root; position: relative; background: var(--blue); color: var(--white); padding-bottom: 60px; }
+/* Seamless tile (15 waves) from Onda2, recoloured to #1f4a8b */
 .site-footer__waves {
-  height: 26px;
-  margin-top: -26px;
-  /* one tile always covers the full width, so no seam is visible */
-  background: var(--cream) url("../assets/img/waves.svg") no-repeat center bottom / max(100%, 1582px) 26px;
+  position: relative;
+  z-index: 1;
+  height: 30px;
+  margin-top: -30px;
+  background: url("../assets/img/waves.png") repeat-x left bottom / auto 100%;
 }
 .site-footer__grid {
   display: grid;
@@ -979,7 +981,9 @@ sup { font-size: 0.55em; line-height: 0; vertical-align: 0.9em; }
   .contact-form .btn { width: 607px; min-height: 58px; margin: 30.2px 0 0 2.6px; font-size: clamp(18px, 1.5vw, 21px); }
 
   /* Location measured on 9.png (same left offset as the contact section) */
-  .location { padding-top: 93.6px; padding-bottom: 112.5px; }
+  .location { padding-top: 93.6px; padding-bottom: 115.9px; }
+  /* the second wave row merges into the footer, as in 9.png */
+  .site-footer__waves { height: 48.3px; margin-top: -36.5px; }
   .location .container { max-width: none; padding-left: max(var(--gutter), calc(50% - 750px)); }
   .location__grid { grid-template-columns: 763px auto; gap: 122.6px; align-items: start; }
   .map { height: 505.9px; aspect-ratio: auto; padding: 14.5px 15px 15.5px 18px; border-radius: 0; background: var(--white); }
