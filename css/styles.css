@@ -513,28 +513,13 @@ sup { font-size: 0.55em; line-height: 0; vertical-align: 0.9em; }
   background: var(--cream);
 }
 .calculator__result-title { font-size: 26px; }
-.suggested { display: grid; place-items: center; padding: 28px 0 34px; }
-.suggested__box {
-  position: relative;
-  display: flex;
-  align-items: baseline;
-  justify-content: center;
-  gap: 6px;
-  width: 160px;
-  aspect-ratio: 1;
-  padding-top: 52px;
-  border: 1px solid var(--blue);
-  background: var(--white);
-  color: var(--blue);
-}
-/* dimension lines */
-.suggested__box::before,
-.suggested__box::after { content: ""; position: absolute; background: var(--blue); }
-.suggested__box::before { left: -21px; top: 0; bottom: 0; width: 1px; }
-.suggested__box::after { left: 0; right: 0; bottom: -21px; height: 1px; }
-.suggested__box strong { font-family: var(--font-head); font-size: 56px; line-height: 1; }
-.suggested__box span { font-size: 18px; font-weight: 400; }
-.calculator__result .btn { margin-top: auto; font-size: 14px; }
+.suggested { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; }
+.suggested__size { color: var(--blue); line-height: 1; }
+.suggested__size strong { font-family: var(--font-head); font-size: 96px; line-height: 1; }
+.suggested__size span { font-size: 52px; font-weight: 280; }
+.suggested__price { margin-top: 12px; }
+.suggested__art { height: auto; width: 110px; }
+.calculator__result .btn { width: 100%; margin-top: auto; font-size: 14px; text-transform: uppercase; }
 
 /* Quote ------------------------------------------------------------------ */
 .quote { padding-block: clamp(80px, 9vw, 120px); }
@@ -894,6 +879,70 @@ sup { font-size: 0.55em; line-height: 0; vertical-align: 0.9em; }
   .help__content { margin-top: min(22.15vw, 531.6px); }
   .help__title { font-size: clamp(40px, 3.95vw, 55px); line-height: 1.1; }
   .help .btn { min-width: 388.6px; min-height: 58px; margin-top: 40.5px; font-size: clamp(18px, 1.57vw, 22px); }
+
+  /* Choose your space + calculator measured on 6.png */
+  .sizes { padding-top: 114px; padding-bottom: 109px; }
+  .sizes .layout-title,
+  .sizes .layout-lead { padding-left: 14px; }
+  .sizes .layout-lead { margin-top: 27.8px; font-size: clamp(18px, 1.64vw, 23px); line-height: 1.5; white-space: nowrap; }
+  .sizes .layout-action { align-self: start; min-width: 388.3px; min-height: 58px; margin-top: -1.9px; font-size: clamp(18px, 1.57vw, 22px); }
+  .sizes .layout-body { margin-top: 55.2px; }
+
+  .size-cards { gap: 37px; }
+  .size-card {
+    position: relative;
+    display: block;
+    min-height: 364.2px;
+    padding: 35.3px 49.7px 42.6px;
+    border-radius: 0;
+  }
+  .size-card:first-child { padding-inline: 55.3px; }
+  .size-card__size { font-size: 65px; line-height: 1; }
+  .size-card__size span:not(.visually-hidden) { margin-left: 2px; font-family: var(--font-body); font-weight: 280; font-size: 0.7em; }
+  .size-card__size sup,
+  .suggested__size sup { font-size: 0.5em; vertical-align: 0.75em; }
+  .size-card__text { max-width: none; margin-top: 7.4px; font-size: 14.5px; font-weight: 400; line-height: 1.36; white-space: nowrap; }
+  .size-card__price { margin-top: 25px; font-size: 42px; }
+  .size-card__price span { font-size: 14px; }
+  .size-card__art { position: absolute; top: var(--t); right: var(--r); width: var(--w); max-width: none; height: auto; }
+  .size-card:nth-child(1) .size-card__art { --t: 84.4px; --r: 55px; --w: 117.4px; }
+  .size-card:nth-child(2) .size-card__art { --t: 34.3px; --r: 51.4px; --w: 143.9px; }
+  .size-card:nth-child(3) .size-card__art { --t: 27.9px; --r: 48px; --w: 152.5px; }
+  .size-card .btn { display: flex; width: 291.5px; min-height: 58.2px; margin: 29px auto 0; font-size: clamp(17px, 1.5vw, 21px); }
+
+  .calculator {
+    grid-template-columns: 1fr 422.8px;
+    gap: 0 52px;
+    min-height: 589.9px;
+    margin-top: 40px;
+    padding: 39.3px 45px 36px 46.6px;
+    border-radius: 40px;
+  }
+  .calculator__title { font-size: 27.6px; }
+  .calculator__tabs { gap: 16.6px; margin-top: 20.8px; }
+  .tab { min-width: 194.2px; min-height: 54.3px; font-size: 21px; }
+  .calculator__hint { margin-top: 21.5px; font-size: 16px; }
+  .counters { gap: 11.2px 14.2px; margin-top: 11px; }
+  .counter { min-height: 51.6px; padding: 0 13.4px 0 11.8px; border-color: var(--gold); border-radius: 0; font-size: 16px; }
+  .counter:nth-child(5), .counter:nth-child(10) { margin-top: 7.4px; }
+  .counter__ctrl { gap: 10px; }
+  .counter__ctrl button { width: 30px; height: 30px; font-size: 16px; }
+  .calculator__note { margin-top: 14px; font-size: 13.75px; white-space: nowrap; }
+  .calculator__result {
+    position: relative;
+    align-self: start;
+    height: 423.8px;
+    margin-top: 53.6px;
+    padding: 0;
+    border-radius: 0;
+    background: #f9f9f8;
+  }
+  .suggested__size { position: absolute; top: 68.8px; left: 65.5px; }
+  .suggested__size strong { font-size: 125px; }
+  .suggested__size span { font-size: 64px; }
+  .suggested__price { position: absolute; top: 206.1px; left: 69px; margin: 0; font-size: 47px; }
+  .suggested__art { position: absolute; top: 83.5px; left: 223px; width: 133.6px; }
+  .calculator__result .btn { position: absolute; top: 304.8px; left: calc(50% - 145.75px); width: 291.5px; min-height: 58.3px; margin: 0; font-size: clamp(17px, 1.5vw, 21px); }
 }
 
 @media (min-width: 1200px) {

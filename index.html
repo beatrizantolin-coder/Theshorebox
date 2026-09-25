@@ -205,7 +205,7 @@
           <li class="size-card" data-reveal="up">
             <div class="size-card__body">
               <p class="size-card__size">2<span>m<sup>2</sup></span></p>
-              <p class="size-card__text">Ideal for a move or storing belongings at the end of the season.</p>
+              <p class="size-card__text">Ideal for a move or<br class="br-desktop"> storing belongings at<br class="br-desktop"> the end of the season.</p>
               <p class="size-card__price">20€<span>/month</span></p>
             </div>
             <img class="size-card__art" src="assets/img/size-2.svg" alt="" width="108" height="137" loading="lazy">
@@ -214,8 +214,8 @@
           </li>
           <li class="size-card" data-reveal="up">
             <div class="size-card__body">
-              <p class="size-card__size">10<span>m<sup>2</sup></span></p>
-              <p class="size-card__text">For the contents of an entire home or a family storage unit.</p>
+              <p class="size-card__size">10<span class="visually-hidden"> m²</span></p>
+              <p class="size-card__text">For the contents of an<br class="br-desktop"> entire home or a<br class="br-desktop"> family storage unit.</p>
               <p class="size-card__price">120€<span>/month</span></p>
             </div>
             <img class="size-card__art" src="assets/img/size-10.svg" alt="" width="131" height="181" loading="lazy">
@@ -223,8 +223,8 @@
           </li>
           <li class="size-card" data-reveal="up">
             <div class="size-card__body">
-              <p class="size-card__size">20<span>m<sup>2</sup></span></p>
-              <p class="size-card__text">For business storage or large volumes of goods.</p>
+              <p class="size-card__size">20<span class="visually-hidden"> m²</span></p>
+              <p class="size-card__text">For business<br class="br-desktop"> storage or large<br class="br-desktop"> volumes of goods.</p>
               <p class="size-card__price">180€<span>/month</span></p>
             </div>
             <img class="size-card__art" src="assets/img/size-20.svg" alt="" width="124" height="181" loading="lazy">
@@ -257,12 +257,17 @@
             </ul>
             <p class="calculator__note">This calculator offers guidance only. Item measurements, stacking and access needs affect the space required.</p>
           </div>
+          <!-- Example result (as in 6.png). TODO: fill from the calculation. -->
           <aside class="calculator__result" aria-live="polite">
-            <h3 class="calculator__result-title">Suggested space:</h3>
+            <h3 class="visually-hidden">Suggested space</h3>
             <div class="suggested">
-              <div class="suggested__box"><strong>5</strong><span>m<sup>2</sup></span></div>
+              <div class="suggested__text">
+                <p class="suggested__size"><strong>3</strong><span>m<sup>2</sup></span></p>
+                <p class="size-card__price suggested__price">20€<span>/month</span></p>
+              </div>
+              <img class="suggested__art" src="assets/img/size-2.svg" alt="" width="108" height="137" loading="lazy">
             </div>
-            <button class="btn btn--gold btn--block" type="button" data-todo="book">Book now</button>
+            <button class="btn btn--gold suggested__btn" type="button" data-todo="book">Book now</button>
           </aside>
         </div>
         </div>
