@@ -977,6 +977,21 @@ sup { font-size: 0.55em; line-height: 0; vertical-align: 0.9em; }
   .field input::placeholder,
   .field textarea::placeholder { color: #9d9d9d; }
   .contact-form .btn { width: 607px; min-height: 58px; margin: 30.2px 0 0 2.6px; font-size: clamp(18px, 1.5vw, 21px); }
+
+  /* Location measured on 9.png (same left offset as the contact section) */
+  .location { padding-top: 93.6px; padding-bottom: 112.5px; }
+  .location .container { max-width: none; padding-left: max(var(--gutter), calc(50% - 750px)); }
+  .location__grid { grid-template-columns: 763px auto; gap: 122.6px; align-items: start; }
+  .map { height: 505.9px; aspect-ratio: auto; padding: 14.5px 15px 15.5px 18px; border-radius: 0; background: var(--white); }
+  .map iframe { position: static; display: block; }
+  .map__placeholder { background: var(--cream); }
+  .location__info { padding-top: 15px; }
+  .eyebrow { font-size: 23px; }
+  .location__title { font-size: 49.2px; line-height: 1.1; }
+  .details { grid-template-columns: 185px auto; gap: 0; margin-top: 62px; font-size: 23.4px; line-height: 1.41; }
+  .details dt { font-size: 22.5px; }
+  .details dt:not(:first-of-type),
+  .details dt:not(:first-of-type) + dd { margin-top: 33px; }
 }
 
 @media (min-width: 1200px) {
