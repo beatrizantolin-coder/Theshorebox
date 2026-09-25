@@ -1208,12 +1208,39 @@ sup { font-size: 0.55em; line-height: 0; vertical-align: 0.9em; }
   }
   .feature__title { font-size: calc(24.09 * var(--p)); line-height: 1.1; }
   .feature p { max-width: none; margin-top: calc(8.5 * var(--p)); font-size: calc(17 * var(--p)); font-weight: 280; line-height: 1.2; }
+
+  /* Space made easy */
+  .services { height: calc(1318.5 * var(--p)); padding: calc(55.5 * var(--p)) 0 0; }
+  .services .container { padding-inline: calc(25.5 * var(--p)); }
+  .services .layout-title { margin-left: calc(-2.2 * var(--p)); font-size: calc(50 * var(--p)); line-height: 1.1; }
+  .services .layout-lead { max-width: none; margin-top: calc(26 * var(--p)); font-size: calc(25 * var(--p)); line-height: 1.32; white-space: nowrap; }
+  .services .layout-body { margin-top: calc(86 * var(--p)); }
+  .services .carousel__dots { margin-left: calc(-12 * var(--p)); }
+  .carousel__source,
+  .carousel__slide { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .service__image { aspect-ratio: 492.2 / 525.1; }
+  .service__media { border-radius: 0; }
+  .service__label { width: calc(462.4 * var(--p)); min-height: calc(70.8 * var(--p)); margin-top: calc(33.3 * var(--p)); border-radius: 0; font-size: calc(25.35 * var(--p)); }
+  .service__text { max-width: calc(420 * var(--p)); margin-top: calc(28 * var(--p)); transform: translateX(calc(-8 * var(--p))); font-size: calc(20 * var(--p)); line-height: 1.2; }
+  .carousel__dots { gap: calc(9.7 * var(--p)); margin-top: calc(60 * var(--p)); }
+  .carousel__dot { width: calc(13 * var(--p)); height: calc(13 * var(--p)); }
+  .services .layout-action {
+    justify-self: center;
+    translate: calc(6 * var(--p)) 0;
+    width: calc(330.7 * var(--p));
+    min-height: calc(70.8 * var(--p));
+    margin-top: calc(43 * var(--p));
+    padding: 0;
+    font-size: calc(24.92 * var(--p));
+  }
 }
 @media (max-width: 899px) {
   .br-mobile { display: inline; }
+  .only-desktop { display: none; }
 }
 @media (min-width: 900px) {
-  .br-mobile { display: none; }
+  .br-mobile,
+  .only-mobile { display: none; }
 }
 
 /* Reduced motion --------------------------------------------------------- */
