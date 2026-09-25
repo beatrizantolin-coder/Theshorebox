@@ -887,6 +887,13 @@ sup { font-size: 0.55em; line-height: 0; vertical-align: 0.9em; }
   .faq__q { padding: 28.3px 24.4px 14.5px 8.4px; font-size: 19.5px; }
   .faq__sign { flex-basis: 8.6px; width: 8.6px; height: 8.6px; margin-right: 0; }
   .faq__sign::before, .faq__sign::after { inset: 3.8px 0 auto; }
+
+  /* Help banner measured on 5.png */
+  .help { height: min(48.83vw, 1172px); min-height: 0; place-items: start center; }
+  .help__image { object-position: 50% 56.4%; filter: brightness(0.85); }
+  .help__content { margin-top: min(22.15vw, 531.6px); }
+  .help__title { font-size: clamp(40px, 3.95vw, 55px); line-height: 1.1; }
+  .help .btn { min-width: 388.6px; min-height: 58px; margin-top: 40.5px; font-size: clamp(18px, 1.57vw, 22px); }
 }
 
 @media (min-width: 1200px) {
