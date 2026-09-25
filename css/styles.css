@@ -996,6 +996,26 @@ sup { font-size: 0.55em; line-height: 0; vertical-align: 0.9em; }
   .details dt { font-size: 22.5px; }
   .details dt:not(:first-of-type),
   .details dt:not(:first-of-type) + dd { margin-top: 33px; }
+
+  /* Footer measured on 10.png (same left offset as contact and location) */
+  .site-footer { padding-bottom: 22px; }
+  .site-footer__grid {
+    grid-template-columns: 196px 575px 191px 214px 292px;
+    grid-template-areas: "logo addr nav legal cta" "credit credit credit credit credit";
+    gap: 0;
+    max-width: none;
+    padding-top: 52px;
+    padding-left: max(var(--gutter), calc(50% - 750px));
+  }
+  .site-footer__logo { grid-area: logo; width: 139px; }
+  .site-footer__contact { grid-area: addr; padding-top: 0; font-size: 13.7px; font-weight: 280; line-height: 1.29; }
+  .site-footer__links:first-of-type { grid-area: nav; }
+  .site-footer__links:last-of-type { grid-area: legal; }
+  .site-footer__links { gap: 0; padding-top: 6.4px; font-size: 13.7px; line-height: 26px; }
+  .site-footer__links:last-of-type { padding-top: 5.4px; font-size: 13.75px; line-height: 26.6px; }
+  .site-footer__links .is-current { font-weight: 700; }
+  .site-footer__cta { grid-area: cta; width: 291.7px; min-height: 58.3px; padding-inline: 0; margin-top: 4.4px; font-size: clamp(18px, 1.5vw, 21px); }
+  .site-footer__credit { grid-area: credit; display: flex; gap: 30px; margin-top: 18.8px; font-size: 12.6px; font-weight: 280; }
 }
 
 @media (min-width: 1200px) {
