@@ -1360,6 +1360,43 @@ sup { font-size: 0.55em; line-height: 0; vertical-align: 0.9em; }
   .counter__ctrl button { width: calc(33.4 * var(--p)); height: calc(33.4 * var(--p)); font-size: calc(18 * var(--p)); }
   .counter__ctrl output { font-size: calc(16 * var(--p)); }
   .calculator__note { position: absolute; top: calc(100% + 25.6 * var(--p)); left: calc(31.1 * var(--p)); width: calc(380 * var(--p)); margin: 0; font-size: calc(13 * var(--p)); line-height: 1.2; white-space: normal; }
+
+  /* Quote: left aligned, as in the PDF */
+  .quote { height: calc(762.7 * var(--p)); padding: calc(64 * var(--p)) 0 0; }
+  .quote__inner { padding-inline: calc(29.2 * var(--p)) 0; text-align: left; }
+  .quote__text { font-size: calc(40 * var(--p)); line-height: 1.2; white-space: nowrap; }
+  .quote__text span { display: block; }
+  .quote .btn { width: calc(354.4 * var(--p)); min-width: 0; min-height: calc(70.9 * var(--p)); margin-top: calc(65 * var(--p)); padding: 0; font-size: calc(25 * var(--p)); text-transform: none; }
+
+  /* Contact: one-column form on a plain background */
+  .contact { height: auto; padding: calc(57 * var(--p)) 0 calc(37.4 * var(--p)); background-image: none; }
+  .contact .container { padding-inline: calc(29.2 * var(--p)) calc(25.8 * var(--p)); }
+  .contact .section-title { font-size: calc(48 * var(--p)); line-height: 1.042; white-space: nowrap; }
+  .contact .section-lead { margin-top: calc(21 * var(--p)); font-size: calc(25 * var(--p)); line-height: 1.307; white-space: nowrap; }
+  .contact-form {
+    width: calc(491.6 * var(--p));
+    max-width: none;
+    margin: calc(60.7 * var(--p)) 0 0 calc(-3.4 * var(--p));
+    padding: calc(45.6 * var(--p)) calc(35.1 * var(--p)) calc(20.5 * var(--p));
+    gap: 0;
+    border-radius: 0;
+  }
+  .contact-form__row { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .field { gap: calc(8.6 * var(--p)); }
+  .contact-form__row + .field,
+  .contact-form > .field,
+  .contact-form__row .field + .field { margin-top: 0; }
+  /* uneven spacing between fields, as in the PDF */
+  .contact-form > .field:nth-of-type(1) { margin-top: calc(2.3 * var(--p)); }
+  .contact-form > .field:nth-of-type(2) { margin-top: calc(14.3 * var(--p)); }
+  .contact-form > .field:nth-of-type(3) { margin-top: calc(11.3 * var(--p)); }
+  .field span { font-size: calc(20 * var(--p)); line-height: 1.4; }
+  .field input,
+  .field textarea { min-height: calc(56.5 * var(--p)); padding: 0 calc(16 * var(--p)); border: 1px solid var(--gold); border-radius: 0; font-size: calc(17 * var(--p)); }
+  .field textarea { height: calc(103.2 * var(--p)); padding-top: calc(12 * var(--p)); resize: none; }
+  .field input::placeholder,
+  .field textarea::placeholder { color: #9d9d9d; }
+  .contact-form .btn { width: 100%; min-height: calc(70.8 * var(--p)); margin: calc(38 * var(--p)) 0 0 calc(0.9 * var(--p)); font-size: calc(25 * var(--p)); text-transform: none; }
 }
 @media (max-width: 899px) {
   .br-mobile { display: inline; }
