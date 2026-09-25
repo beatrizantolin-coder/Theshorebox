@@ -300,11 +300,15 @@ sup { font-size: 0.55em; line-height: 0; vertical-align: 0.9em; }
 .carousel__dot.is-current { background: transparent; }
 
 .service { text-align: center; }
+/* Per-photo framing (from 3.png) via --pos, --zoom and --origin */
+.service__media { overflow: hidden; border-radius: var(--radius-md); }
 .service__image {
+  object-position: var(--pos, 50% 50%);
+  transform: scale(var(--zoom, 1));
+  transform-origin: var(--origin, 50% 50%);
   width: 100%;
   aspect-ratio: 353 / 377;
   object-fit: cover;
-  border-radius: var(--radius-md);
 }
 .service__label {
   display: flex;
@@ -807,11 +811,26 @@ sup { font-size: 0.55em; line-height: 0; vertical-align: 0.9em; }
     column-gap: 40px;
   }
   .layout-action { align-self: center; margin-top: 20px; }
+  .section-title { font-size: clamp(40px, 3.95vw, 55px); }
+
+  /* Space made easy measured on 3.png */
+  .services { padding-top: 150px; padding-bottom: 84.5px; }
+  .services .layout-title,
+  .services .layout-lead { padding-left: 6.5px; }
+  .services .layout-lead { max-width: none; margin-top: 28.6px; font-size: clamp(18px, 1.64vw, 23px); line-height: 1.52; white-space: nowrap; }
+  .services .layout-action { align-self: start; min-width: 274.5px; min-height: 59px; font-size: clamp(18px, 1.57vw, 22px); margin-top: 41.6px; }
+  .services .layout-body { margin-top: 66.5px; }
+  .carousel__source,
+  .carousel__slide { gap: 48px 37.3px; }
+  .service__media { border-radius: 0; }
+  .service__image { aspect-ratio: 412.7 / 440.4; }
+  .service__label { width: calc(100% - 34px); min-height: 58px; margin-top: 28px; border-radius: 0; font-size: clamp(18px, 1.57vw, 22px); }
+  .service__text { max-width: 345px; margin-top: 29px; font-size: 16.5px; line-height: 1.2; }
+  .carousel__dots { gap: 11.7px; margin-top: 57px; }
+  .carousel__dot { width: 13.3px; height: 13.3px; }
   .layout-body { margin-top: 64px; }
-  .services .layout-action { min-width: 234px; }
   .how .layout-action { min-width: 324px; }
-  .section-layout .section-lead { font-size: 18px; }
-  .services .layout-lead,
+  .section-lead { font-size: 18px; }
   .how__lead { max-width: 500px; }
   .sizes .layout-lead { max-width: none; }
   .how .layout-body { margin-top: 44px; }
