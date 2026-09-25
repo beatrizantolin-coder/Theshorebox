@@ -1282,6 +1282,22 @@ sup { font-size: 0.55em; line-height: 0; vertical-align: 0.9em; }
   .faq__sign { flex-basis: calc(9 * var(--p)); width: calc(9 * var(--p)); height: calc(9 * var(--p)); margin-right: calc(1 * var(--p)); }
   .faq__sign::before, .faq__sign::after { inset: calc(4 * var(--p)) 0 auto; }
   .faq__a p { font-size: calc(18 * var(--p)); }
+
+  /* Help banner: photo placed as in the PDF */
+  .help { display: block; height: calc(634.4 * var(--p)); min-height: 0; }
+  .help__image {
+    inset: auto;
+    top: calc(-290.7 * var(--p));
+    left: calc(-249.4 * var(--p));
+    width: calc(1331.5 * var(--p));
+    max-width: none;
+    height: calc(941.8 * var(--p));
+    object-fit: fill;
+    filter: none;
+  }
+  .help__content { position: relative; margin: 0; padding: calc(244 * var(--p)) 0 0; }
+  .help__title { font-size: calc(50 * var(--p)); line-height: 1.1; }
+  .help .btn { width: calc(401 * var(--p)); min-width: 0; min-height: calc(70.9 * var(--p)); margin: calc(38.5 * var(--p)) 0 0 calc(-20.6 * var(--p)); padding: 0; font-size: calc(24.92 * var(--p)); }
 }
 @media (max-width: 899px) {
   .br-mobile { display: inline; }
